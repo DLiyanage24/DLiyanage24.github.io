@@ -1,0 +1,55 @@
+\documentclass{beamer}
+\usepackage{hyperref}
+%Information to be included in the title page:
+\title{Presentation}
+\author{Dinuwanthi Liyanage}
+\institute{University of Nebraska Lincoln}
+\date{10-26-2023}
+
+\begin{document}
+\SweaveOpts{concordance=TRUE}
+
+\frame{\titlepage}
+
+\begin{frame}
+\frametitle{Introduction}
+\begin{itemize}
+\item My name is Dinuwanthi Liyanage
+\item I'm from Sri Lanka,it is a beautiful island in the Indian Ocean. I grew up in the central part of the country.
+\item  My birthday is on 24th of July
+\item Currently I'm following a Masters Degree in Statistics at University of Nebraska Lincoln.
+\item I expect to graduate in 2025.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{My favorite animal}
+\includegraphics[width=0.5\textwidth]{cat1.jpg}
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{My Favorite Plot}
+
+<<plot,echo=FALSE,message=FALSE,fig.cap ="My Favorite Plot",out.width=".8\\textwidth">>=
+library(mclust)
+library(ggplot2)
+
+ggplot(banknote, aes(x = Length, fill = Status)) +
+  geom_histogram(binwidth = 0.1, color = "black" ) + #, position = "dodge") 
+  labs(title = "Histogram of Banknote Length", x = "Length", y = "Frequency")
+
+@
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{CV link}
+%\begin(center)
+\href{https://dliyanage24.github.io/Dinuwanthi_Liyanage_Resume.pdf}{Click here to open the CV}
+%\end(center)
+\end{frame}
+
+\end{document}
